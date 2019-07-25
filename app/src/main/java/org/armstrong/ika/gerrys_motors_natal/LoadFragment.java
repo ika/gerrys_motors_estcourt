@@ -1,26 +1,25 @@
 package org.armstrong.ika.gerrys_motors_natal;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 public class LoadFragment extends Fragment {
 
-    private int page;
     private String content;
-    private String image;
 
-    // newInstance constructor for creating fragment with arguments
-    public static LoadFragment newInstance(int page, String content, String image) {
+    public static LoadFragment newInstance(String content) {
         LoadFragment myFrag = new LoadFragment();
         Bundle args = new Bundle();
-        args.putInt("page", page);
         args.putString("content", content);
-        args.putString("image", image);
         myFrag.setArguments(args);
         return myFrag;
     }
@@ -29,25 +28,34 @@ public class LoadFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        page = getArguments().getInt("page", 0);
         content = getArguments().getString("content", "");
-        image = getArguments().getString("image", "");
 
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.activity_load_fragment, parent, false);
+        View view = inflater.inflate(R.layout.activity_layout_fragment, parent, false);
 
-        ImageView iv = (ImageView) v.findViewById(R.id.imageView);
-        // iv.setImageResource(R.drawable.rentals);
-        iv.setImageResource(getResources().getIdentifier(image, "drawable", LoadActivity.getContext().getPackageName()));
-
-        TextView tv = (TextView) v.findViewById(R.id.contentTextView);
-        tv.setText(content);
-
-
-        return v;
+        return view;
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        WebView webView = view.findViewById(R.id.webview);
+
+        //WebSettings webSettings = webView.getSettings();
+        //webSettings.setJavaScriptEnabled(true);
+        //webSettings.setCacheMode(webSettings.LOAD_NO_CACHE);
+
+        //webView.addJavascriptInterface(new WebAppInterface(getActivity()), "Android");
+
+        //webView.clearCache(true);
+        //webView.clearHistory();
+
+        webView.loadDataWithBaseURL(null, content, "text/html", "utf-8", null);
+
+
+    }
 }

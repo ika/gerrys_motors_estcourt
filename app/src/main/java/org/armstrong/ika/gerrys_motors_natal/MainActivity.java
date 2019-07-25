@@ -2,11 +2,13 @@ package org.armstrong.ika.gerrys_motors_natal;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
-public class MainActivity extends ActionBarMenuActivity {
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+public class MainActivity extends AppCompatActivity {
 
     public static int backButtonCount = 0;
 
@@ -16,7 +18,7 @@ public class MainActivity extends ActionBarMenuActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar ab = getSupportActionBar();

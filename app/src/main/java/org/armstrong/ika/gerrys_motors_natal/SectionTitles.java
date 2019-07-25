@@ -7,12 +7,13 @@ package org.armstrong.ika.gerrys_motors_natal;
 public class SectionTitles {
 
     public static String TITLES[] = {
-            "Convenience Shop",
-            "Workshop",
-            "Towing and Recovery",
-            "Cleanups and Spills",
-            "Truck Stop",
-            "Scrap Yard",
-            "Fitment Centre"
+            "Breakdowns",
+            "Tyre Fitment",
+            "Hydraulic Pipes",
+            "Forklift Hire",
+            "Hazmat Unit",
+            "Water Tanker",
+            "Spares",
+            "Contact Us"
     };
 }

@@ -2,12 +2,15 @@ package org.armstrong.ika.gerrys_motors_natal;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
+
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,12 +18,12 @@ import java.io.InputStream;
  * Created by ika on 10/20/16.
  */
 
-public class LoadActivity extends ActionBarMenuActivity {
+public class LoadActivity extends AppCompatActivity {
 
     private static LoadActivity instance;
     FragmentPagerAdapter adapterViewPager;
     //private Fragment frag;
-    private int NUM_ITEMS = 7;
+    private int NUM_ITEMS = 8;
 
     public static Context getContext() {
 
@@ -34,14 +37,14 @@ public class LoadActivity extends ActionBarMenuActivity {
 
         instance = this;
 
-        ViewPager vpPager = (ViewPager) findViewById(R.id.vpPager);
+        ViewPager vpPager = findViewById(R.id.vpPager);
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
         vpPager.setAdapter(adapterViewPager);
 
         Bundle extras = getIntent().getExtras();
         String CASE = extras.getString("CASE");
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar ab = getSupportActionBar();
@@ -71,11 +74,11 @@ public class LoadActivity extends ActionBarMenuActivity {
 
             int C = position;
 
-            String file = C + ".txt";
+            String file = C + ".html";
             String content = LoadAsset(file);
-            String image = SectionImages.IMAGES[C];
+            //String image = SectionImages.IMAGES[C];
 
-            return LoadFragment.newInstance(C, content, image);
+            return LoadFragment.newInstance(content);
         }
 
         @Override
