@@ -628,6 +628,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable forklift
 drawable ic_launcher_background
+drawable ic_settings_applications_black_24dp
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -686,6 +687,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id action_area
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -746,7 +748,6 @@ id line1
 id line3
 id listMode
 id list_item
-id menu_about
 id message
 id middle
 id multiply
@@ -905,8 +906,18 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string app_link
 string app_name
-string footerString
+string app_share
+string back_press
+string menu_eight
+string menu_five
+string menu_four
+string menu_one
+string menu_seven
+string menu_six
+string menu_three
+string menu_two
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat

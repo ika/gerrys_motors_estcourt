@@ -1,10 +1,13 @@
 package org.armstrong.ika.gerrys_motors_natal;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -15,6 +18,8 @@ import androidx.fragment.app.Fragment;
 public class LoadFragment extends Fragment {
 
     private String content;
+
+    WebView webView;
 
     public static LoadFragment newInstance(String content) {
         LoadFragment myFrag = new LoadFragment();
@@ -36,6 +41,11 @@ public class LoadFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_layout_fragment, parent, false);
 
+        webView = view.findViewById(R.id.webview);
+
+        //WebSettings webSettings = webView.getSettings();
+        //webSettings.setJavaScriptEnabled(true);
+
         return view;
     }
 
@@ -43,10 +53,7 @@ public class LoadFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        WebView webView = view.findViewById(R.id.webview);
 
-        //WebSettings webSettings = webView.getSettings();
-        //webSettings.setJavaScriptEnabled(true);
         //webSettings.setCacheMode(webSettings.LOAD_NO_CACHE);
 
         //webView.addJavascriptInterface(new WebAppInterface(getActivity()), "Android");
@@ -56,6 +63,14 @@ public class LoadFragment extends Fragment {
 
         webView.loadDataWithBaseURL(null, content, "text/html", "utf-8", null);
 
+        //webView.addJavascriptInterface(new WebAppInterface(getActivity()), "Android");
 
     }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+    }
+
 }

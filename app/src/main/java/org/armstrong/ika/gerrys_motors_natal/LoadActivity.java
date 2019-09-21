@@ -1,7 +1,10 @@
 package org.armstrong.ika.gerrys_motors_natal;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 
 import androidx.appcompat.app.ActionBar;
@@ -56,6 +59,31 @@ public class LoadActivity extends AppCompatActivity {
 
         MainActivity.backButtonCount = 0;
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.activity_action_bar_menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+
+            case android.R.id.home:
+                this.onBackPressed();
+                break;
+
+            default:
+
+                MainActivity.getInstance().displayShare();
+
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public class MyPagerAdapter extends FragmentPagerAdapter {

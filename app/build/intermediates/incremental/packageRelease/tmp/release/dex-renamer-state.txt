@@ -1,4 +1,4 @@
-#Fri Jul 19 15:39:46 SAST 2019
-base.0=/home/ika/AndroidStudioProjects/Gerrys_motors_estcourt/app/build/intermediates/dex/release/mergeDexRelease/out
+#Fri Sep 20 10:38:59 SAST 2019
+base.0=/home/ika/AndroidStudioProjects/Gerrys_motors_estcourt/app/build/intermediates/dex/release/mergeDexRelease/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
