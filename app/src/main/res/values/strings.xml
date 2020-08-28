@@ -11,4 +11,6 @@
     <string name="menu_seven">Spares</string>
     <string name="menu_eight">Contact Us</string>
     <string name="app_share">Share this App</string>
+    <string name="app_download">Click on the link below and download our App</string>
+    <string name="app_subject">Download Gerry\'s Motors App</string>
 </resources>

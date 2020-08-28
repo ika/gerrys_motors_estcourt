@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ika/AndroidStudioProjects/Gerrys_motors_estcourt/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+            "outputFile": "/home/ika/Projects/activeProjects/Gerrys_motors_estcourt/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/ika/AndroidStudioProjects/Gerrys_motors_estcourt/app/src/main/res/values-w820dp/dimens.xml",
+                    "source": "/home/ika/Projects/activeProjects/Gerrys_motors_estcourt/app/src/main/res/values-w820dp/dimens.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",

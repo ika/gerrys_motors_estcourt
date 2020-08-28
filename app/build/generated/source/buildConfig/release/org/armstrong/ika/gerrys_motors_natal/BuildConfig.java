@@ -8,6 +8,6 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "org.armstrong.ika.gerrys_motors_natal";
   public static final String BUILD_TYPE = "release";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 12;
-  public static final String VERSION_NAME = "2.2";
+  public static final int VERSION_CODE = 16;
+  public static final String VERSION_NAME = "1.6";
 }

@@ -906,9 +906,11 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string app_download
 string app_link
 string app_name
 string app_share
+string app_subject
 string back_press
 string menu_eight
 string menu_five

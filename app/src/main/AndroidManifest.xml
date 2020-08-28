@@ -3,6 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.armstrong.ika.gerrys_motors_natal">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,6 +25,15 @@
 
         <activity
             android:name="org.armstrong.ika.gerrys_motors_natal.LoadActivity"
+            android:parentActivityName="org.armstrong.ika.gerrys_motors_natal.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.armstrong.ika.gerrys_motors_natal.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="org.armstrong.ika.gerrys_motors_natal.LocationActivity"
             android:parentActivityName="org.armstrong.ika.gerrys_motors_natal.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data

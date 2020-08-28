@@ -2,8 +2,6 @@ package org.armstrong.ika.gerrys_motors_natal;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -94,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder sb = new StringBuilder();
 
         sb.append(getString(R.string.app_name));
+        sb.append("\n");
+        sb.append(getString(R.string.app_download));
         sb.append("\n\n");
         sb.append(getString(R.string.app_link));
 
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         shareIntent.setAction(Intent.ACTION_SEND);
         shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         shareIntent.setType("text/plain");
-        //shareIntent.putExtra(Intent.EXTRA_SUBJECT, subj);
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_subject));
         shareIntent.putExtra(Intent.EXTRA_TEXT, sb.toString());
 
         Intent intent = Intent.createChooser(shareIntent, getString(R.string.app_share));
