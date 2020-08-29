@@ -3,14 +3,6 @@ apply plugin: 'com.android.application'
 android {
     buildToolsVersion '29.0.3'
     compileSdkVersion 29
-    signingConfigs {
-        config {
-            keyAlias 'androidKEY'
-            keyPassword 'x63436v7'
-            storeFile file('/home/ika/keys/androidGerrysCert.jks')
-            storePassword 'rmbcm3'
-        }
-    }
     defaultConfig {
         applicationId "org.armstrong.ika.gerrys_motors_natal"
         minSdkVersion 16
